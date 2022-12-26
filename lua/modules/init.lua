@@ -57,7 +57,9 @@ return require('packer').startup(function()
 
     use 'lewis6991/gitsigns.nvim'
     
+    -- Java
     use 'mfussenegger/nvim-jdtls'
+    use 'mfussenegger/nvim-dap'
 
     use 'onsails/lspkind-nvim' -- Set icons at the right of completion
 end)

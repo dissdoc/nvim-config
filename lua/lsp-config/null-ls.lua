@@ -4,9 +4,9 @@ local b = null_ls.builtins
 
 local sources = {
     b.formatting.eslint_d,
-    b.formatting.stylua,
+    b.formatting.stylua.with { filetypes = { "lua" } },
     b.formatting.autopep8,
-    b.formatting.google_java_format,
+    b.formatting.google_java_format.with { filetypes = { "java" } },
     b.formatting.prettierd.with { filetypes = { "html", "yaml", "markdown" } },
 
     b.diagnostics.markdownlint,
