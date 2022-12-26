@@ -48,6 +48,7 @@ return require('packer').startup(function()
     use 'L3MON4D3/LuaSnip'
     use 'lvimuser/lsp-inlayhints.nvim'
     use "christianchiarulli/lua-dev.nvim"
+    use 'rcarriga/cmp-dap'
 
     -- Simple lines
     use 'ErichDonGubler/lsp_lines.nvim' 

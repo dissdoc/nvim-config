@@ -90,6 +90,11 @@ _G.packer_plugins = {
     url = "https://github.com/romgrk/barbar.nvim",
     wants = { "nvim-web-devicons" }
   },
+  ["cmp-dap"] = {
+    loaded = true,
+    path = "/home/dissdoc/.local/share/nvim/site/pack/packer/start/cmp-dap",
+    url = "https://github.com/rcarriga/cmp-dap"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/dissdoc/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",

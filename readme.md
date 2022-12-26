@@ -37,3 +37,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```sh
 TSInstall any_lang
 ```
+6. Add special modules for the Java Module
+    - Java need version 17+ (Strong!) and set JAVA_HOME
+    ```sh
+    export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64            
+    ```
+    - install or download release [microsoft/java-debug](https://github.com/microsoft/java-debug/releases/tag/0.43.0) to the /mason/packages/java-debug
+    - then build the downloaded project ./mvnw clean install

@@ -29,8 +29,10 @@ local workspace_dir = WORKSPACE_PATH .. project_name
 local bundles = {}
 
 local mason_path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/")
-vim.list_extend(bundles, vim.split(vim.fn.glob(mason_path .. "packages/java-test/extension/server/*.jar"), "\n"))
-vim.list_extend(bundles, vim.split(vim.fn.glob(mason_path .. "packages/java-debu-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar"), "\n"))
+-- vim.list_extend(bundles, vim.split(vim.fn.glob(mason_path .. "packages/java-test/extension/server/*.jar"), "\n"))
+-- vim.list_extend(bundles, vim.split(vim.fn.glob(mason_path .. "packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar"), "\n"))
+vim.list_extend(bundles, vim.split(vim.fn.glob(mason_path .. "packages/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.43.0.jar"), "\n"))
+
 
 local config = {
     cmd = {
