@@ -61,6 +61,7 @@ return require('packer').startup(function()
     -- Java
     use 'mfussenegger/nvim-jdtls'
     use 'mfussenegger/nvim-dap'
+    use 'nvim-telescope/telescope-dap.nvim'
 
     use 'onsails/lspkind-nvim' -- Set icons at the right of completion
 end)
