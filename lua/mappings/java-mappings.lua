@@ -5,10 +5,8 @@ vim.g.mapleader = ' '
 
 -- Java Mappings
 map('n', '<leader>ji', ':lua require("jdtls").organize_imports()<CR>', opts)
-map('n', '<leader>jv', ':lua require("jdtls").extract_variable()<CR>', opts)
-map('n', '<leader>JV', ':lua require("jdtls").extract_variable(true)<CR>', opts)
-map('n', '<leader>jc', ':lua require("jdtls").extract_constant()<CR>', opts)
-map('n', '<leader>JC', ':lua require("jdtls").extract_constant(true)<CR>', opts)
+map('n', '<leader>jv', ':lua require("jdtls").extract_variable(true)<CR>', opts)
+map('n', '<leader>jc', ':lua require("jdtls").extract_constant(true)<CR>', opts)
 map('n', '<leader>jm', ':lua require("jdtls").extract_method(true)<CR>', opts)
 
 function get_test_runner(test_name, debug)
@@ -32,16 +30,29 @@ function run_java_test_class(debug)
     vim.cmd('term ' .. get_test_runner(class_name, debug))
 end
 
-function get_spring_boot_runner(profile, debug)
+function get_debug_param(debug)
     local debug_param = ""
+
     if debug then
         debug_param = ' -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"'
     end
 
+    return debug_param
+end
+
+function get_profile_param(profile)
     local profile_param = ""
+
     if profile then
         profile_param = " -Dspring-boot.run.profiles=" ..profile .. " "
     end
+
+    return profile_param
+end
+
+function get_spring_boot_runner(profile, debug)
+    local debug_param = get_debug_param(debug)
+    local profile_param = get_profile_param(profile)
 
     return './gradlew bootRun ' .. profile_param .. debug_param
 end
@@ -50,10 +61,22 @@ function run_spring_boot(debug)
     vim.cmd('term ' .. get_spring_boot_runner(method_name, debug))
 end
 
+function get_spring_boot_maven_runner(profile, debug)
+    local debug_param = get_debug_param(debug)
+    local profile_param = get_profile_param(profile)
+
+    return './mvnw spring-boot:run ' .. profile_param .. debug_param
+end
+
+function run_spring_boot_maven(debug)
+    vim.cmd('term ' .. get_spring_boot_maven_runner(method_name, debug))
+end
+
 vim.keymap.set('n', '<leader>tm', function() run_java_test_method() end)
 vim.keymap.set('n', '<leader>TM', function() run_java_test_method(true) end)
 vim.keymap.set('n', '<leader>tc', function() run_java_test_class() end)
 vim.keymap.set('n', '<leader>TC', function() run_java_test_class(true) end)
+vim.keymap.set('n', '<leader>8', function() run_spring_boot_maven() end)
 vim.keymap.set('n', '<leader>9', function() run_spring_boot() end)
 vim.keymap.set('n', '<leader>0', function() run_spring_boot(true) end)
 

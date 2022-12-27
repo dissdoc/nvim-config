@@ -6,11 +6,11 @@ local sources = {
 	b.formatting.eslint_d,
 	b.formatting.stylua.with({ filetypes = { "lua" } }),
 	b.formatting.autopep8,
-	b.formatting.google_java_format.with({ filetypes = { "java" } }),
+	-- b.formatting.google_java_format.with({ filetypes = { "java" } }),
 	b.formatting.prettierd.with({ filetypes = { "html", "yaml", "markdown" } }),
 
 	b.diagnostics.markdownlint,
-	b.diagnostics.shellcheck,
+	-- b.diagnostics.shellcheck,
 
 	-- python
 	b.diagnostics.flake8,

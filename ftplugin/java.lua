@@ -108,7 +108,11 @@ local config = {
 				},
 			},
 			format = {
-				enabled = false,
+				enabled = true,
+                settings = {
+                    url = vim.fn.stdpath "config" .. "/nvim/lang-servers/java-formatter.xml",
+                    profile = "GoogleStyle",
+                },
 			},
 		},
 		signatureHelp = {
