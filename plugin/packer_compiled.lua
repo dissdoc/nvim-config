@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/home/dissdoc/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onenord.nvim"] = {
+    loaded = true,
+    path = "/home/dissdoc/.local/share/nvim/site/pack/packer/start/onenord.nvim",
+    url = "https://github.com/rmehri01/onenord.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/dissdoc/.local/share/nvim/site/pack/packer/start/packer.nvim",

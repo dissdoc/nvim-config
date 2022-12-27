@@ -4,6 +4,7 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
 
     use 'EdenEast/nightfox.nvim'
+    use 'rmehri01/onenord.nvim'
     
     use 'nvim-tree/nvim-tree.lua'
     

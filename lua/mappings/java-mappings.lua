@@ -8,6 +8,7 @@ map('n', '<leader>ji', ':lua require("jdtls").organize_imports()<CR>', opts)
 map('n', '<leader>jv', ':lua require("jdtls").extract_variable(true)<CR>', opts)
 map('n', '<leader>jc', ':lua require("jdtls").extract_constant(true)<CR>', opts)
 map('n', '<leader>jm', ':lua require("jdtls").extract_method(true)<CR>', opts)
+map('n', '<leader>ja', ':lua vim.lsp.buf.code_action()<CR>', opts)
 
 function get_test_runner(test_name, debug)
     if debug then

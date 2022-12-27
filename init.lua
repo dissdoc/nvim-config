@@ -1,6 +1,6 @@
 require('settings')
 require('modules')
-require('themes.nightfox')
+require('themes')
 require('nvtree')
 
 require('mappings')
@@ -16,3 +16,5 @@ require('treesitter-config')
 
 require('toggleterm-config')
 require('gitsigns-config')
+
+require('patterns')
