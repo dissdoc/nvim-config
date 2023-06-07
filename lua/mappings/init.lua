@@ -7,7 +7,6 @@ map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>f", ":Format<CR>", opts)
 
 -- BarBar Mappings
-
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
 -- Re-order to previous/next
