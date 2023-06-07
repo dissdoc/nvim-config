@@ -5,7 +5,7 @@ local servers = {
     "html",
     "jdtls",
     "jsonls",
-    "sumneko_lua",
+    "lua_ls",
     "tsserver",
     "pyright",
     "yamlls",
@@ -52,14 +52,14 @@ for _, server in pairs(servers) do
         opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
     end
 
-    if server == "sumneko_lua" then
+    if server == "lua_ls" then
         local luadev = require("lua-dev").setup {
             lspconfig = {
                 on_attach = opts.on_attach,
                 capabilities = opts.capabilities,
             },
         }
-        lspconfig.sumneko_lua.setup(luadev)
+        lspconfig.lua_ls.setup(luadev)
         goto continue
     end
 
