@@ -36,9 +36,19 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ```sh
     sudo apt install fzf
     ```
+4. Preinstall configs
+```sh
+# open current neovim directory
+cd ~/.config/nvim
+nvim .
+# open file lua/modules/init.lua and run command
+:so
+# then close and open nvim again 
+```
 4. After preinstall, then install all plugins
 ```sh
 :PackerSync
+# you maybe need enter packer sync twise, it's not a problem? :)
 ```
 5. Install any languages for TreeSitter
 ```sh
