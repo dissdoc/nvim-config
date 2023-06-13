@@ -23,11 +23,18 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     4. And finally change language in your terminal
 - install nodejs
     ```sh
-    ????
+    curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
+    # check valid
+    nano /tmp/nodesource_setup.sh
+    # install nodejs
+    sudo bash /tmp/nodesource_setup.sh
+    sudo apt install nodejs
+    # check version
+    node -v
     ```
 - install fzf libraries
     ```sh
-    ????
+    sudo apt install fzf
     ```
 4. After preinstall, then install all plugins
 ```sh
