@@ -49,6 +49,8 @@ nvim .
 ```sh
 :PackerSync
 # you maybe need enter packer sync twise, it's not a problem? :)
+:TSUpdate
+
 ```
 5. Install any languages for TreeSitter
 ```sh
@@ -61,3 +63,7 @@ TSInstall any_lang
     ```
     - install or download release [microsoft/java-debug](https://github.com/microsoft/java-debug/releases/tag/0.43.0) to the /mason/packages/java-debug
     - then build the downloaded project ./mvnw clean install
+7. Add emmet module to check html
+```sh
+sudo npm install -g ls_emmet 
+```
