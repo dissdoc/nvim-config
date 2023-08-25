@@ -5,10 +5,10 @@ require'nvim-treesitter.configs'.setup {
         'lua',
         'javascript',
         'typescript',
-        'java',
         'html',
         'yaml',
         'json',
+        'go',
     },
 
     sync_install = false,
@@ -34,10 +34,10 @@ require'nvim-treesitter.configs'.setup {
             'lua',
             'typescript',
             'javascript',
-            'java',
             'html',
             'json',
             'yaml',
+            'go',
         },
     },
 

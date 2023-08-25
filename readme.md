@@ -51,28 +51,21 @@ nvim .
 :PackerSync
 # you maybe need enter packer sync twise, it's not a problem? :)
 :TSUpdate
-
 ```
 5. Install any languages for TreeSitter
 ```sh
 TSInstall any_lang
 ```
-6. Add special modules for the Java Module
-    - Java need version 17+ (Strong!) and set JAVA_HOME
-    ```sh
-    export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64            
-    ```
-    - install or download release [microsoft/java-debug](https://github.com/microsoft/java-debug/releases/tag/0.43.0) to the /mason/packages/java-debug
-    - then build the downloaded project ./mvnw clean install
-7. Add emmet module to check html
+6. Add emmet module to check html
 ```sh
 sudo npm install -g ls_emmet 
 ```
-8. Install for Golang (for null-ls plugin)
+7. Install for Golang (for null-ls plugin)
 ```sh
 go install github.com/incu6us/goimports-reviser/v3@latest
 go install mvdan.cc/gofumpt@latest
 go install github.com/segmentio/golines@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
 ## Commands
@@ -84,4 +77,21 @@ go install github.com/segmentio/golines@latest
 #### NVTree
 
 *<leader>t* - toggle nvtree
+
+*-* - directory up
+*Ctrl+]* - set directory as root
+*Ctrl+t* - open file in a new tab
+*W* - collapse all
+*E* - expand all
+*f* - find smth
+*F* - close find interactive search
+
 *a* - create file or directory
+*r* - rename file or directory
+*d* - delete file or directory
+*x* - cut file or folder
+*c* - copy file or folder
+*p* - paste file or folder
+*y* - copy only filename to the clipboard
+*o* - open file or directory
+

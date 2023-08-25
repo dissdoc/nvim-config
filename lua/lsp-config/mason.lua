@@ -3,7 +3,6 @@ local servers = {
     "cssmodules_ls",
     "emmet_ls",
     "html",
-    "jdtls",
     "jsonls",
     "lua_ls",
     "tsserver",
@@ -77,10 +76,6 @@ for _, server in pairs(servers) do
     if server == "emmet_ls" then
         local emmet_ls_opts = require "lsp-config.settings.emmet_ls"
         opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
-    end
-
-    if server == "jdtls" then
-        goto continue
     end
 
     lspconfig[server].setup(opts)

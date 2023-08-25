@@ -1,68 +1,69 @@
-return require('packer').startup(function()
-    
-    use 'wbthomason/packer.nvim'
-    use 'kyazdani42/nvim-web-devicons'
+return require("packer").startup(function()
+	use("wbthomason/packer.nvim")
+	use("kyazdani42/nvim-web-devicons")
 
-    use 'EdenEast/nightfox.nvim'
-    use 'rmehri01/onenord.nvim'
-    
-    use 'nvim-tree/nvim-tree.lua'
-    
-    use 'rcarriga/nvim-notify' -- Notification plugin
-    use 'nvim-lualine/lualine.nvim' -- Bottom vim status line
-    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+	use("EdenEast/nightfox.nvim")
+	use("rmehri01/onenord.nvim")
 
-    -- TreeSitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-    use 'nvim-treesitter/nvim-treesitter-refactor'
-    use 'windwp/nvim-ts-autotag'
+	use("nvim-tree/nvim-tree.lua")
 
-    -- Format code
-    use 'jose-elias-alvarez/null-ls.nvim'
+	use("rcarriga/nvim-notify") -- Notification plugin
+	use("nvim-lualine/lualine.nvim") -- Bottom vim status line
+	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
-    -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+	-- TreeSitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
+	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("windwp/nvim-ts-autotag")
 
-    use 'windwp/nvim-autopairs'
-    use 'numToStr/Comment.nvim'
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
+	-- Format code
+	use("jose-elias-alvarez/null-ls.nvim")
 
-    -- Add terminal
-    use 'akinsho/toggleterm.nvim'
+	-- Telescope
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
-    -- scheme formatters
-    use "b0o/schemastore.nvim"
+	use("windwp/nvim-autopairs")
+	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-    -- LSP Server and Plugins
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
-    use 'lvimuser/lsp-inlayhints.nvim'
-    use "christianchiarulli/lua-dev.nvim"
-    use 'rcarriga/cmp-dap'
+	-- Add terminal
+	use("akinsho/toggleterm.nvim")
 
-    -- Simple lines
-    use 'ErichDonGubler/lsp_lines.nvim' 
+	-- scheme formatters
+	use("b0o/schemastore.nvim")
 
-    -- Tiny statusline component
-    use 'SmiteshP/nvim-navic'
+	-- LSP Server and Plugins
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+	use("neovim/nvim-lspconfig")
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("saadparwaiz1/cmp_luasnip")
+	use("L3MON4D3/LuaSnip")
+	use("lvimuser/lsp-inlayhints.nvim")
+	use("christianchiarulli/lua-dev.nvim")
+	use("rcarriga/cmp-dap")
 
-    use 'lewis6991/gitsigns.nvim'
-    
-    -- Java
-    use 'mfussenegger/nvim-jdtls'
-    use 'mfussenegger/nvim-dap'
-    use 'nvim-telescope/telescope-dap.nvim'
+	-- Simple lines
+	use("ErichDonGubler/lsp_lines.nvim")
 
-    use 'onsails/lspkind-nvim' -- Set icons at the right of completion
+	-- Tiny statusline component
+	use("SmiteshP/nvim-navic")
+
+	use("lewis6991/gitsigns.nvim")
+
+	-- use("olexsmir/gopher.vim")
+
+	use("mfussenegger/nvim-dap")
+	use("leoluz/nvim-dap-go")
+	use("nvim-telescope/telescope-dap.nvim")
+
+	use("onsails/lspkind-nvim") -- Set icons at the right of completion
 end)

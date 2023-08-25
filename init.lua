@@ -4,7 +4,6 @@ require('themes')
 require('nvtree')
 
 require('mappings')
-require('mappings.java-mappings')
 
 require('telescope-config')
 
@@ -16,5 +15,3 @@ require('treesitter-config')
 
 require('toggleterm-config')
 require('gitsigns-config')
-
-require('patterns')
