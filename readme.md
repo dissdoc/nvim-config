@@ -36,6 +36,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ```sh
     sudo apt install fzf
     ```
+    After that you need install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 4. Preinstall configs
 ```sh
 # open current neovim directory
@@ -73,3 +74,14 @@ go install github.com/incu6us/goimports-reviser/v3@latest
 go install mvdan.cc/gofumpt@latest
 go install github.com/segmentio/golines@latest
 ```
+
+## Commands
+
+#### Neovim Commons
+
+*:so* - source your neovim code
+
+#### NVTree
+
+*<leader>t* - toggle nvtree
+*a* - create file or directory
