@@ -40,7 +40,14 @@ return require('packer').startup(function()
     use "b0o/schemastore.nvim"
 
     -- LSP Server and Plugins
-    use 'williamboman/mason.nvim'
+    use {
+        'williamboman/mason.nvim',
+        opts = {
+            ensure_installed = {
+                "gopls"
+            }
+        }
+    }
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'

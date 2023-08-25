@@ -21,6 +21,11 @@ local sources = {
 
 	-- hover
 	b.hover.dictionary,
+
+    -- golang
+    b.formatting.gofumpt,
+    b.formatting.goimports_reviser,
+    b.formatting.golines,
 }
 
 null_ls.setup({

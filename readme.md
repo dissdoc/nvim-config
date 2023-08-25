@@ -67,3 +67,9 @@ TSInstall any_lang
 ```sh
 sudo npm install -g ls_emmet 
 ```
+8. Install for Golang (for null-ls plugin)
+```sh
+go install github.com/incu6us/goimports-reviser/v3@latest
+go install mvdan.cc/gofumpt@latest
+go install github.com/segmentio/golines@latest
+```

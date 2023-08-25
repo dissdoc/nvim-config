@@ -33,6 +33,7 @@ require "lsp-config.null-ls"
 require "lsp-config.autocmp"
 require "lsp-config.autopairs"
 require "lsp-config.comment"
+require "lsp-config.golang"
 
 require("lsp_lines").setup()
 
